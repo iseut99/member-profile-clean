@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
       const prompt = `Write a short, professional company bio for "${companyName}" using this information:\n\n${sourceText}`;
 
       const response = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4.0",
         messages: [{ role: "user", content: prompt }],
         temperature: 0.7,
       });
